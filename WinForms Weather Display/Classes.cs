@@ -46,7 +46,7 @@ namespace WinForms_Weather_Display
         public static DateTime FromUnix(long Time)
         {
             DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            return epoch.AddSeconds(Time);
+            return epoch.AddSeconds(Time).ToLocalTime();
         }
         /// <summary>
         /// All of the data collected together
